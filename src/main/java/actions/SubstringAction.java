@@ -65,10 +65,14 @@ public class SubstringAction
         System.out.println(" split() & length():\n-------------------------");
         String myString = "\"Amateurs sit and wait for inspiration, the rest of us just get up and go to work.\" ";
         System.out.println(myString);
-        String stringNoSpaces = myString.replace(" ","");
-        System.out.println("The length of the string excluding the white spaces is equal to " + myString.replace(" ","").length());
-        System.out.println("The number of symbols in the string is: " + stringNoSpaces.length());
 
+       // String stringNoSpaces = myString.replace(" ","");
+      //System.out.println("The length of the string excluding the white spaces is equal to " + myString.replace(" ","").length());
+      //System.out.println("The number of symbols in the string is: " + stringNoSpaces.length());
+
+        String[] words = myString.split("\\s+");
+        int numWords = words.length;
+        System.out.printf("The number of words in the string is %d: ", numWords);
 
         System.out.println(" ");
         System.out.println("---------------------------------------------------------------");
